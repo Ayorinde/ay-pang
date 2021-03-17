@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import './index.css';
+import {deleteCartItem} from '../../local/mutations'
 
-function NumberInput ({initialValue, onChangeQty}) {
+function NumberInput ({initialValue, onChangeQty, cartItem}) {
     let [value, setValue] = useState(initialValue);
 
     useEffect(()=>{
@@ -17,7 +18,13 @@ function NumberInput ({initialValue, onChangeQty}) {
         setValue(++value);
     }
     const decrement = () => {
-        value >1? setValue(--value): setValue(value);
+        if(value > 1){
+            setValue(--value)
+        }
+        else{
+            deleteCartItem(cartItem);
+        }
+        
     }
     return (
         <div className="number-input">

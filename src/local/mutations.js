@@ -18,6 +18,12 @@ export function editCartItem (itemToEdit) {
     return cartItemsVar(newCartItems);
 }
 
+export function deleteCartItem (item){
+    const cartItems = cartItemsVar();
+    const newCartItems = cartItems.filter((cartItem) => cartItem.id !== item.id);
+    return cartItemsVar(newCartItems);
+}
+
 export function toggleShowCart(value){
     return showCartVar(value);
 }

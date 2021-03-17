@@ -23,3 +23,7 @@
 .app .show {
   display: block ;
 }
+
+.app .close{
+  cursor: pointer;
+}

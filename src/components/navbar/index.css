@@ -21,6 +21,7 @@
 
 .app nav ul li img{
     height: 1.2rem;
+    cursor: pointer;
 }
 
 .app nav ul{

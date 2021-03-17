@@ -1,9 +1,13 @@
 import './index.css';
 import NumberInput from '../../components/numberInput';
+import {editCartItem} from '../../local/mutations';
 
-function CartItem () {
-    let item = {id: '1', title: 'Dark Circle Defense', image_url: 'https://d1b929y2mmls08.cloudfront.net/luminskin/img/new-landing-page/reload-exfoliating-rub.png', price: 30}
-    const {id, image_url, title, price} = item;
+function CartItem ({item}) {
+    const {id, image_url, title, price, qty} = item;
+    const setQty = (qty) => {
+        const updatedItem = {...item, qty: qty }
+        editCartItem(updatedItem)
+    }
     return (
         <div className="cart__item clearfix">
             <header>
@@ -12,7 +16,7 @@ function CartItem () {
             </header>
             <img src={image_url} alt={title} />
             <footer>
-                <NumberInput />
+                <NumberInput initialValue={qty}  onChangeQty={setQty}/>
                 <span className="label">${price}.00</span>
             </footer>
 

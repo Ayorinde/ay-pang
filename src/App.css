@@ -3,3 +3,23 @@
   font-size: 2.6rem;
   color: rgb(72 72 72);
 }
+
+.app .btn{
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #4b5648;
+  background-color: #ffffff;
+  font-size: 1rem;
+}
+
+.app .btn.btn-primary{
+  background-color: #4b5648;
+  color: #ffffff;
+}
+
+.app .hide {
+  display: none;
+}
+.app .show {
+  display: block ;
+}

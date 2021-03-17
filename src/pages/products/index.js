@@ -25,7 +25,7 @@ function Products () {
             </header>
             <section className="products__section">
                 {
-                    data.products.map((product) => <ProductItem item={product} /> )
+                    data.products.map((product) => <ProductItem key={product.id} item={product} /> )
                 }
                 
             </section>

@@ -31,3 +31,14 @@
     background-color: transparent;
     border-radius: 1.5rem;
 }
+
+.app .cart .cart__subtotal{
+    margin-top: 10rem;
+    border-top: 1px solid #4b5648;
+}
+.app .cart .cart__subtotal p{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    color: #4b5648;
+}

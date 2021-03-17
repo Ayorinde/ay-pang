@@ -8,6 +8,11 @@ export const cache = new InMemoryCache({
           read () {
             return cartItemsVar();
           }
+        },
+        showCart: {
+          read () {
+            return showCartVar();
+          }
         }
       }
     }
@@ -15,3 +20,4 @@ export const cache = new InMemoryCache({
 });
 
 export const cartItemsVar = makeVar([]);
+export const showCartVar = makeVar(true);

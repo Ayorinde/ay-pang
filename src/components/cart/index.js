@@ -21,9 +21,7 @@ function Cart () {
             </select>
             <section>
                 {
-                    cartItems.map((item) => {
-                        return <CartItem key={item.id} item={item} />
-                    })
+                    cartItems.map((item) => <CartItem key={item.id} item={item} />)
                 }
             </section>
             <section className="cart__subtotal">

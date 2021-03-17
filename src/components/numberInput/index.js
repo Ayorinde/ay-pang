@@ -2,12 +2,16 @@ import React, {useState, useEffect} from 'react'
 import './index.css';
 
 function NumberInput ({initialValue, onChangeQty}) {
-    let [value, setValue] = useState(initialValue || 1);
+    let [value, setValue] = useState(initialValue);
 
     useEffect(()=>{
         if(value)
         onChangeQty(value);
     },[value])
+
+    useEffect(()=>{
+        setValue(initialValue)
+    },[initialValue])
 
     const increment = () =>{
         setValue(++value);

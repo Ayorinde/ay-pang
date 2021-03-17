@@ -13,6 +13,11 @@ export const cache = new InMemoryCache({
           read () {
             return showCartVar();
           }
+        },
+        currency: {
+          read () {
+            return setCurrencyVar();
+          }
         }
       }
     }
@@ -21,3 +26,4 @@ export const cache = new InMemoryCache({
 
 export const cartItemsVar = makeVar([]);
 export const showCartVar = makeVar(true);
+export const setCurrencyVar = makeVar("USD");

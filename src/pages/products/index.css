@@ -21,6 +21,7 @@
 .app .products header select{
     padding: 1.8rem;
     min-width: 26rem;
+    font-size: 1.2rem;
 }
 
 .app .products section.products__section{
@@ -31,4 +32,21 @@
     justify-content: center;
     flex-wrap: wrap;
     padding: 8rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .app .products header{
+        flex-direction: column;
+        padding: 2rem 6rem;
+    }
+    .app .products header h1 {
+        font-size: 2rem;
+    }
+    .app .products header select{
+        padding: 1rem;
+        min-width: 8;
+        font-size: 1rem;
+    }
+
+
 }

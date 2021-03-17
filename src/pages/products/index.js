@@ -1,14 +1,15 @@
 import React, {useEffect} from 'react';
-import {useQuery} from '@apollo/client';
+import {useQuery, useReactiveVar} from '@apollo/client';
 import {GET_PRODUCTS} from '../../queries/products';
-import ProductItem from '../../components/productItem'
+import ProductItem from '../../components/productItem';
+import {setCurrencyVar} from '../../cache';
 import './index.css';
 
 function Products () {
-    const {loading, error, data} = useQuery(GET_PRODUCTS);
+    const currency = useReactiveVar(setCurrencyVar);
+    const {loading, error, data} = useQuery(GET_PRODUCTS,{ variables: {currency}});
     if(loading) return <p> .... loading .... </p>
     if(error) return <p> Error loading products :)  {error.message}</p>
-    console.log('..... data ..... : ', data);
 
     return (
         <div className="products">

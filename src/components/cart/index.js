@@ -3,12 +3,19 @@ import { useReactiveVar } from '@apollo/client';
 import './index.css';
 import CartItem from '../cartItem';
 import {getCartItems} from '../../local/queries';
-import {toggleShowCart} from '../../local/mutations'
+import {toggleShowCart, setCurrency as setTheCurrency} from '../../local/mutations'
 import {cartItemsVar, showCartVar} from '../../cache';
 
 function Cart () {
     const cartItems = useReactiveVar(cartItemsVar);
-    const showCart = useReactiveVar(showCartVar)
+    const showCart = useReactiveVar(showCartVar);
+    const [currency, setCurrency] = useState('USD');
+    const onSetCurrency = (e) =>{
+        let value = e.target.value;
+        setCurrency(value);
+        setTheCurrency(value);
+    }
+
     if(!cartItems || cartItems.length < 1) return null;
     return (
         <nav className={showCart? "cart show": "cart hide"}>
@@ -16,8 +23,10 @@ function Cart () {
                 <button className="round" type="button" onClick={()=> toggleShowCart(false)}> &lt; </button>
                 <h4>Your Cart</h4>
             </header>
-            <select>
-                <option>USD</option>
+            <select value={currency} onChange={onSetCurrency}>
+                <option value="USD">USD</option>
+                <option value="AUD">AUD</option>
+                <option value="CAD">CAD</option>
             </select>
             <section>
                 {

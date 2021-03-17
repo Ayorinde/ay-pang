@@ -1,7 +1,5 @@
-import React, {useEffect} from 'react'
-import itemImage from '../../images/lumin-cart.png';
+import React from 'react'
 import './index.css';
-import {cartItemsVar} from '../../cache';
 import {addToCart, toggleShowCart} from '../../local/mutations';
 
 function ProductItem ({item}) {

@@ -1,4 +1,4 @@
-import {cartItemsVar, showCartVar} from '../cache';
+import {cartItemsVar, showCartVar, setCurrencyVar} from '../cache';
 
 export function addToCart (item) {
     const cartItems = cartItemsVar();
@@ -26,5 +26,9 @@ export function deleteCartItem (item){
 
 export function toggleShowCart(value){
     return showCartVar(value);
+}
+
+export function setCurrency(value){
+    return setCurrencyVar(value);
 }
 

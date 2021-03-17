@@ -42,3 +42,12 @@
     font-size: 1.2rem;
     color: #4b5648;
 }
+
+@media only screen and (max-width: 600px) {
+    .app .cart{
+        width: 75vw;
+        padding: 2rem;
+    }
+
+
+}

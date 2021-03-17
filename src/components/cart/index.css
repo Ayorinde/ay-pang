@@ -1,0 +1,33 @@
+.app .cart{
+    background-color: #f2f3f0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45vw;
+    height: 100vh;
+    padding: 2rem;
+}
+.app .cart header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.app .cart header h4{
+    font-size: 1rem;
+    flex: 4;
+    text-align: center;
+}
+.app .cart select{
+    border: none;
+    min-width: 8rem;
+    padding: .6rem .3rem;
+    margin-top: 1rem;
+}
+
+.app .cart button.round{
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #cdd1cd;
+    background-color: transparent;
+    border-radius: 1.5rem;
+}

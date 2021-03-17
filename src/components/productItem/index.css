@@ -1,0 +1,32 @@
+.app .product__item {
+    flex: 1;
+}
+.app .product__item .image-container, .app .product__item .image-description {
+    /* width: 20rem; */
+    text-align: center;
+}
+.app .product__item .image-container{
+    padding: 4rem 1rem;
+    height: 14rem;
+}
+.app .product__item .image-container img {
+    height: 12rem;
+    width: 24rem;
+    object-fit: contain;
+}
+
+.app .product__item .image-description{
+    padding: 0 1rem 6rem;
+}
+
+.app .product__item .image-description p{
+    font-size: 1.3rem;
+}
+
+.app .product__item .image-description button{
+    background-color: #4b5648;
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2.8rem;
+    font-size: 1.2rem;
+}

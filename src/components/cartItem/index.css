@@ -1,0 +1,35 @@
+.app .cart__item{
+    background-color: #fff;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+.app .cart__item header{
+    padding: .4rem;
+}
+.app .cart__item header span{
+    font-size: 1.2rem;
+}
+.app .cart__item img{
+    width: 2rem;
+    height: 2rem;
+    float: right;
+    margin-right: 2rem;
+    padding: .6rem;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.app .cart__item footer{
+    clear: both;
+    padding-bottom: .4rem;
+}
+.app .cart__item footer span.label{
+    font-size: 1.4rem;
+    display: inline-block;
+    width: 70%;
+    text-align: center;
+}
